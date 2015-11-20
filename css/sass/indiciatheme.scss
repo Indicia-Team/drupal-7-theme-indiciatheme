@@ -45,27 +45,12 @@ header#header {
   .region {
     padding-right: $spacing;
     /* Prevent padding messing up layout */
-    @include box-sizing(border-box);    
-    label {
-      /* labels in columns take up 1 line */
-      display: block;
-      margin-bottom: 0;
-      width: auto;
-    }
-    textarea, #map-help {
-      /* full width boxes, accounting for border, padding etc*/
-      width: 100%;
-      @include box-sizing(border-box);
-    }
+    @include box-sizing(border-box);
     .control-box nobr {
       @include inline-block;
       span * {
         @include inline-block;
       }
-    }
-    .helpText, p.inline-error {
-      /* Controls on separate line to labels, so remove margin for the helptext and errors */
-      margin-left: 0;
     }
   }
   .region:last-child {
@@ -158,21 +143,21 @@ table.report-grid {
 /* Two col grid layout in iforms */
 #entry_form .at-panel {
   margin: 0 4px;
-  .two-50 {
+  &.two-50 {
     label {
       display: block;
       width: auto;
-      &.olButton {
-        display: inline-block;
-      }
+      margin-bottom: 0;      
     }
     .control-box label {
       display: inline;
     }
-    textarea {
+    textarea, #map-help {
       width: 90%;
+      @include box-sizing(border-box);
     }
-    .helpText {
+    .helpText,  p.inline-error{
+      /* Controls on separate line to labels, so remove margin for the helptext and errors */
       margin-left: 0;
     }
     .hierarchy-select {
