@@ -87,8 +87,10 @@ input[type=submit], input[type=button], button, .indicia-button, a.indicia-butto
   float: right;
 }
 
-/* Correct a pixture reloaded bug with menu arrow placement */
 div#menu-bar {
+  /* Ensure menu bar doesn't overlay popups */
+  z-index: 0;
+  /* Correct a pixture reloaded bug with menu arrow placement */
   font-size: 120%;
   ul.sf-menu li a.sf-with-ul {
     padding: 0 25px;
@@ -123,10 +125,9 @@ fieldset legend {
   width: auto !important;
 }
 
-/* Fix potential for datepicker div to appear as blob at bottom of screen, and to go under the menu when it pops up */
+/* Fix potential for datepicker div to appear as blob at bottom of screen */
 div#ui-datepicker-div {
   display: none;
-  z-index: 2000 !important;
 }
 
 /* Remove pixture reloaded margin on report tables */
