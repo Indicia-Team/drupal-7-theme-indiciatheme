@@ -87,9 +87,13 @@ input[type=submit], input[type=button], button, .indicia-button, a.indicia-butto
   float: right;
 }
 
-div#menu-bar {
+div#menu-bar, .sf-menu, .sf-menu li, .sf-menu li ul,
+.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu li:hover ul, .sf-menu li.sfHover ul {
   /* Ensure menu bar doesn't overlay popups */
-  z-index: 0;
+  z-index: auto;
+}
+
+div#menu-bar {
   /* Correct a pixture reloaded bug with menu arrow placement */
   font-size: 120%;
   ul.sf-menu li a.sf-with-ul {
