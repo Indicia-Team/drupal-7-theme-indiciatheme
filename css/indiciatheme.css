@@ -164,7 +164,7 @@ input[type=submit].disabled, input[type=submit][disabled], input[type=button].di
 div#menu-bar, .sf-menu, .sf-menu li, .sf-menu li ul,
 .sf-menu li:hover, .sf-menu li.sfHover, .sf-menu li:hover ul, .sf-menu li.sfHover ul {
   /* Ensure menu bar doesn't overlay popups */
-  z-index: auto;
+  z-index: 1;
 }
 
 /* line 96, sass/indiciatheme.scss */
